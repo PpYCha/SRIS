@@ -38,8 +38,8 @@ namespace SRIS.UserForms
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bt_SaveTech = new System.Windows.Forms.Button();
             this.bt_Remove = new System.Windows.Forms.Button();
+            this.bt_SaveTech = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Technician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -103,43 +103,40 @@ namespace SRIS.UserForms
             // 
             this.technicianBindingSource.DataSource = typeof(SRIS.Models.Technician);
             // 
-            // bt_SaveTech
-            // 
-            this.bt_SaveTech.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_SaveTech.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_SaveTech.FlatAppearance.BorderSize = 0;
-            this.bt_SaveTech.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_SaveTech.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_SaveTech.Location = new System.Drawing.Point(472, 267);
-            this.bt_SaveTech.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_SaveTech.Name = "bt_SaveTech";
-            this.bt_SaveTech.Size = new System.Drawing.Size(112, 34);
-            this.bt_SaveTech.TabIndex = 1;
-            this.bt_SaveTech.Text = "SAVE";
-            this.bt_SaveTech.UseVisualStyleBackColor = false;
-            this.bt_SaveTech.Click += new System.EventHandler(this.bt_SaveTech_Click);
-            // 
             // bt_Remove
             // 
             this.bt_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_Remove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_Remove.FlatAppearance.BorderSize = 0;
-            this.bt_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Remove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_Remove.Location = new System.Drawing.Point(599, 267);
-            this.bt_Remove.Margin = new System.Windows.Forms.Padding(0);
+            this.bt_Remove.ForeColor = System.Drawing.Color.Black;
+            this.bt_Remove.Image = global::SRIS.Properties.Resources.icons8_denied_23px;
+            this.bt_Remove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_Remove.Location = new System.Drawing.Point(612, 266);
             this.bt_Remove.Name = "bt_Remove";
-            this.bt_Remove.Size = new System.Drawing.Size(112, 34);
-            this.bt_Remove.TabIndex = 2;
+            this.bt_Remove.Size = new System.Drawing.Size(101, 29);
+            this.bt_Remove.TabIndex = 104;
             this.bt_Remove.Text = "REMOVE";
-            this.bt_Remove.UseVisualStyleBackColor = false;
+            this.bt_Remove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_Remove.UseVisualStyleBackColor = true;
             this.bt_Remove.Click += new System.EventHandler(this.bt_Remove_Click);
+            // 
+            // bt_SaveTech
+            // 
+            this.bt_SaveTech.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_SaveTech.ForeColor = System.Drawing.Color.Black;
+            this.bt_SaveTech.Image = global::SRIS.Properties.Resources.icons8_add_user_male_23px;
+            this.bt_SaveTech.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_SaveTech.Location = new System.Drawing.Point(510, 266);
+            this.bt_SaveTech.Name = "bt_SaveTech";
+            this.bt_SaveTech.Size = new System.Drawing.Size(101, 29);
+            this.bt_SaveTech.TabIndex = 103;
+            this.bt_SaveTech.Text = "ADD";
+            this.bt_SaveTech.UseVisualStyleBackColor = true;
+            this.bt_SaveTech.Click += new System.EventHandler(this.bt_SaveTech_Click);
             // 
             // TechnicianForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(730, 304);
             this.Controls.Add(this.bt_Remove);
             this.Controls.Add(this.bt_SaveTech);
@@ -160,8 +157,6 @@ namespace SRIS.UserForms
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView_Technician;
-        private System.Windows.Forms.Button bt_SaveTech;
-        private System.Windows.Forms.Button bt_Remove;
         private System.Windows.Forms.DataGridViewTextBoxColumn techidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn techNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn techPositionDataGridViewTextBoxColumn;
@@ -173,5 +168,7 @@ namespace SRIS.UserForms
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource technicianBindingSource;
+        private System.Windows.Forms.Button bt_Remove;
+        private System.Windows.Forms.Button bt_SaveTech;
     }
 }

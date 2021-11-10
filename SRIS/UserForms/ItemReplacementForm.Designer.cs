@@ -55,12 +55,12 @@ namespace SRIS.UserForms
             this.label21 = new System.Windows.Forms.Label();
             this.cb_ReceivedBy = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.bt_ServiceProvidedBy = new System.Windows.Forms.Button();
             this.cb_ServiceProvidedBy = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.bt_itemReplacement = new System.Windows.Forms.Button();
             this.cb_ItemList = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.bt_itemReplacement = new System.Windows.Forms.Button();
+            this.bt_ServiceProvidedBy = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +119,7 @@ namespace SRIS.UserForms
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(12, 208);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(98, 21);
@@ -138,7 +138,7 @@ namespace SRIS.UserForms
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(12, 179);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 21);
@@ -178,7 +178,7 @@ namespace SRIS.UserForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 307);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 21);
@@ -199,7 +199,7 @@ namespace SRIS.UserForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 335);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 21);
@@ -210,7 +210,7 @@ namespace SRIS.UserForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(12, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 21);
@@ -244,7 +244,7 @@ namespace SRIS.UserForms
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(12, 116);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(68, 21);
@@ -265,7 +265,7 @@ namespace SRIS.UserForms
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(12, 27);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -286,7 +286,7 @@ namespace SRIS.UserForms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(12, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 21);
@@ -308,7 +308,7 @@ namespace SRIS.UserForms
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(12, 87);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 21);
@@ -319,7 +319,7 @@ namespace SRIS.UserForms
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(12, 56);
             this.label21.Name = "label21";
             this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -341,7 +341,7 @@ namespace SRIS.UserForms
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
             this.checkBox1.Location = new System.Drawing.Point(16, 255);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(174, 23);
@@ -349,20 +349,6 @@ namespace SRIS.UserForms
             this.checkBox1.Text = "(If Already Released)";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // bt_ServiceProvidedBy
-            // 
-            this.bt_ServiceProvidedBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_ServiceProvidedBy.FlatAppearance.BorderSize = 0;
-            this.bt_ServiceProvidedBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_ServiceProvidedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_ServiceProvidedBy.Location = new System.Drawing.Point(794, 431);
-            this.bt_ServiceProvidedBy.Margin = new System.Windows.Forms.Padding(2);
-            this.bt_ServiceProvidedBy.Name = "bt_ServiceProvidedBy";
-            this.bt_ServiceProvidedBy.Size = new System.Drawing.Size(37, 27);
-            this.bt_ServiceProvidedBy.TabIndex = 111;
-            this.bt_ServiceProvidedBy.UseVisualStyleBackColor = false;
-            this.bt_ServiceProvidedBy.Click += new System.EventHandler(this.bt_ServiceProvidedBy_Click);
             // 
             // cb_ServiceProvidedBy
             // 
@@ -377,27 +363,13 @@ namespace SRIS.UserForms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(21, 435);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 19);
             this.label4.TabIndex = 112;
             this.label4.Text = "Service Provided By:";
-            // 
-            // bt_itemReplacement
-            // 
-            this.bt_itemReplacement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_itemReplacement.FlatAppearance.BorderSize = 0;
-            this.bt_itemReplacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_itemReplacement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_itemReplacement.Location = new System.Drawing.Point(794, 395);
-            this.bt_itemReplacement.Margin = new System.Windows.Forms.Padding(2);
-            this.bt_itemReplacement.Name = "bt_itemReplacement";
-            this.bt_itemReplacement.Size = new System.Drawing.Size(37, 27);
-            this.bt_itemReplacement.TabIndex = 114;
-            this.bt_itemReplacement.UseVisualStyleBackColor = false;
-            this.bt_itemReplacement.Click += new System.EventHandler(this.bt_itemReplacement_Click);
             // 
             // cb_ItemList
             // 
@@ -412,23 +384,55 @@ namespace SRIS.UserForms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(21, 399);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 19);
+            this.label5.Size = new System.Drawing.Size(140, 19);
             this.label5.TabIndex = 115;
-            this.label5.Text = "Service Provided By:";
+            this.label5.Text = "Item Replacement:";
+            // 
+            // bt_itemReplacement
+            // 
+            this.bt_itemReplacement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_itemReplacement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.bt_itemReplacement.FlatAppearance.BorderSize = 0;
+            this.bt_itemReplacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_itemReplacement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.bt_itemReplacement.Image = ((System.Drawing.Image)(resources.GetObject("bt_itemReplacement.Image")));
+            this.bt_itemReplacement.Location = new System.Drawing.Point(794, 391);
+            this.bt_itemReplacement.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_itemReplacement.Name = "bt_itemReplacement";
+            this.bt_itemReplacement.Size = new System.Drawing.Size(37, 27);
+            this.bt_itemReplacement.TabIndex = 117;
+            this.bt_itemReplacement.UseVisualStyleBackColor = false;
+            this.bt_itemReplacement.Click += new System.EventHandler(this.bt_itemReplacement_Click);
+            // 
+            // bt_ServiceProvidedBy
+            // 
+            this.bt_ServiceProvidedBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_ServiceProvidedBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.bt_ServiceProvidedBy.FlatAppearance.BorderSize = 0;
+            this.bt_ServiceProvidedBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_ServiceProvidedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.bt_ServiceProvidedBy.Image = ((System.Drawing.Image)(resources.GetObject("bt_ServiceProvidedBy.Image")));
+            this.bt_ServiceProvidedBy.Location = new System.Drawing.Point(794, 431);
+            this.bt_ServiceProvidedBy.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_ServiceProvidedBy.Name = "bt_ServiceProvidedBy";
+            this.bt_ServiceProvidedBy.Size = new System.Drawing.Size(37, 27);
+            this.bt_ServiceProvidedBy.TabIndex = 118;
+            this.bt_ServiceProvidedBy.UseVisualStyleBackColor = false;
+            this.bt_ServiceProvidedBy.Click += new System.EventHandler(this.bt_ServiceProvidedBy_Click);
             // 
             // ItemReplacementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 506);
+            this.Controls.Add(this.bt_ServiceProvidedBy);
             this.Controls.Add(this.bt_itemReplacement);
             this.Controls.Add(this.cb_ItemList);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.bt_ServiceProvidedBy);
             this.Controls.Add(this.cb_ServiceProvidedBy);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox3);
@@ -473,11 +477,11 @@ namespace SRIS.UserForms
         private System.Windows.Forms.ComboBox cb_PropertyNo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cb_TypeOfUnit;
-        private System.Windows.Forms.Button bt_ServiceProvidedBy;
         private System.Windows.Forms.TextBox cb_ServiceProvidedBy;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button bt_itemReplacement;
         private System.Windows.Forms.TextBox cb_ItemList;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button bt_itemReplacement;
+        private System.Windows.Forms.Button bt_ServiceProvidedBy;
     }
 }

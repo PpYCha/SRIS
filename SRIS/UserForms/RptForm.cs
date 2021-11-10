@@ -81,8 +81,6 @@ namespace SRIS.UserForms
             report1.SetParameterValue("ii_id_Rec", ii_Id);
             report1.SetParameterValue("ii_id_Inspected", ii_Id);
 
-
-
             crystalReportViewer1.ShowPrintButton = true;
             crystalReportViewer1.ShowExportButton = true;
             crystalReportViewer1.ReportSource = report1;
@@ -95,7 +93,6 @@ namespace SRIS.UserForms
             string monthStart = cb_MonthStart.Text;
             string monthEnd = cb_MonthEnd.Text;
 
-
             if (monthStart == monthEnd)
             {
                 CrystalReport1();
@@ -106,21 +103,10 @@ namespace SRIS.UserForms
                 YearlyReport();
 
             }
-            if (monthStart == "January" && monthEnd == "June")
+            else if ((monthStart != monthEnd))
             {
                 FirstHalfReport();
             }
-            if (monthStart == "June" && monthEnd == "December")
-            {
-
-
-            }
-
-
-
-
-
-
 
         }
 
@@ -134,13 +120,24 @@ namespace SRIS.UserForms
             string strPwd = "miso4321";
             bool useIntegratedSecurity = true;
 
-            var month = cb_MonthStart.GetItemText(cb_MonthStart.SelectedItem);
-            var year = cb_Year.GetItemText(cb_Year.SelectedItem);
-            string desktopRepairCount = "DESKTOP";
-            string laptopRepairCount = "LAPTOP";
-            string printerRepairCount = "PRINTER";
-            string netWorkConnectivityRepairCount = "NETWORK";
-            string othersRepair = string.Empty;
+            string monthStart = cb_MonthStart.GetItemText(cb_MonthStart.SelectedItem);
+            var monthEnd = cb_MonthStart.GetItemText(cb_MonthEnd.SelectedItem);
+            string year = cb_Year.Text;
+
+            int monthNo = DateTime.ParseExact(monthEnd, "MMMM", CultureInfo.CurrentCulture).Month;
+
+
+            string lastDay = DateTime.DaysInMonth(Convert.ToInt32(year), monthNo).ToString();
+
+            rpt_MonthlyTest report1 = new rpt_MonthlyTest();
+            report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, useIntegratedSecurity);
+            report1.SetParameterValue("start", DateTime.ParseExact(year + "-" + monthStart + "-01", "yyyy-MMMM-dd", CultureInfo.CurrentCulture).Date);
+            report1.SetParameterValue("end", DateTime.ParseExact(year + "-" + monthEnd + "-" + lastDay, "yyyy-MMMM-dd", CultureInfo.CurrentCulture).Date);
+            crystalReportViewer1.ShowPrintButton = true;
+            crystalReportViewer1.ShowExportButton = true;
+            crystalReportViewer1.ReportSource = report1;
+            Cursor.Current = Cursors.Default;
+
         }
 
         private void YearlyReport()

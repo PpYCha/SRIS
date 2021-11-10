@@ -1,9 +1,11 @@
-﻿using SRIS.UserControls;
+﻿using ServiceRequestInformationSystem;
+using SRIS.UserControls;
 using SRIS.UserForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +20,13 @@ namespace SRIS
         {
             InitializeComponent();
         }
+
+        SqlConnection con;
+        SqlCommand cmd;
+
+        private string serverName = "Mew";
+        private string dataBasefileNameBackUp = "SrisDbTest" + ".bak";
+        private string dataBaseFileName = "SrisDbTest";
 
         private void serviceRequestToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -129,7 +138,7 @@ namespace SRIS
         private void sRMonthlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RptForm rptForm = new RptForm();
-           
+
             rptForm.ShowDialog();
         }
 
@@ -152,6 +161,60 @@ namespace SRIS
             ItemReplacementForm itemReplacementForm = new ItemReplacementForm();
             DesignClass.FormDesign(itemReplacementForm);
             itemReplacementForm.ShowDialog();
+        }
+
+        private void backUpDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                con = new SqlConnection("Data Source=" + serverName + "; Database=Master;data source=.; Integrated Security=true");
+                con.Open();
+                cmd = new SqlCommand("select *  from sysservers  where srvproduct='SQL Server'", con);
+                con.Close();
+                SaveFileDialog1.FileName = dataBasefileNameBackUp.Replace(".bak", "-") + DateTime.Now.ToString("dd-MM-yyyy");
+
+                SaveFileDialog1.DefaultExt = "bak";
+                SaveFileDialog1.Filter = "BAK files (*.bak)|*.bak";
+                SaveFileDialog1.RestoreDirectory = true;
+                if (SaveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string s = null;
+                    s = SaveFileDialog1.FileName;
+                    string query = ("Backup database " + dataBaseFileName + " to disk='" + s + "'");
+                    con.Open();
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Backup Succesfull", " ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("", "Please Back up to External drive or partition", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void importDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opd = new OpenFileDialog();
+            opd.Filter = "Back up (*.bak)|*.bak";
+            opd.RestoreDirectory = true;
+
+
+
+            if (opd.ShowDialog() == DialogResult.OK)
+            {
+                SQLCon.DbCon();
+
+
+                SQLCon.sqlCommand = new SqlCommand(@"USE MASTER RESTORE DATABASE'" + dataBaseFileName + "' FROM DISK = '" + opd.FileName + "' WITH REPLACE", SQLCon.sqlConnection);
+                SQLCon.sqlCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Restore Successfully");
+            }
         }
     }
 }

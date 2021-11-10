@@ -37,8 +37,8 @@ namespace SRIS.UserForms
             this.abbreviationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.officeDeparmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bt_Remove = new System.Windows.Forms.Button();
-            this.bt_OfficeDepartment = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bt_SaveTech = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OfficeDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeDeparmentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +59,7 @@ namespace SRIS.UserForms
             this.dataGridView_OfficeDepartment.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_OfficeDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_OfficeDepartment.Name = "dataGridView_OfficeDepartment";
-            this.dataGridView_OfficeDepartment.Size = new System.Drawing.Size(1199, 335);
+            this.dataGridView_OfficeDepartment.Size = new System.Drawing.Size(1199, 343);
             this.dataGridView_OfficeDepartment.TabIndex = 0;
             // 
             // odidDataGridViewTextBoxColumn
@@ -93,46 +93,43 @@ namespace SRIS.UserForms
             // 
             this.officeDeparmentBindingSource.DataSource = typeof(SRIS.Models.OfficeDeparment);
             // 
-            // bt_Remove
+            // button1
             // 
-            this.bt_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_Remove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_Remove.FlatAppearance.BorderSize = 0;
-            this.bt_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Remove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_Remove.Location = new System.Drawing.Point(1037, 351);
-            this.bt_Remove.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_Remove.Name = "bt_Remove";
-            this.bt_Remove.Size = new System.Drawing.Size(174, 43);
-            this.bt_Remove.TabIndex = 4;
-            this.bt_Remove.Text = "REMOVE";
-            this.bt_Remove.UseVisualStyleBackColor = false;
-            this.bt_Remove.Click += new System.EventHandler(this.bt_Remove_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1112, 362);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 29);
+            this.button1.TabIndex = 106;
+            this.button1.Text = "REMOVE";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.bt_Remove_Click);
             // 
-            // bt_OfficeDepartment
+            // bt_SaveTech
             // 
-            this.bt_OfficeDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_OfficeDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_OfficeDepartment.FlatAppearance.BorderSize = 0;
-            this.bt_OfficeDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_OfficeDepartment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_OfficeDepartment.Location = new System.Drawing.Point(848, 351);
-            this.bt_OfficeDepartment.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_OfficeDepartment.Name = "bt_OfficeDepartment";
-            this.bt_OfficeDepartment.Size = new System.Drawing.Size(174, 43);
-            this.bt_OfficeDepartment.TabIndex = 3;
-            this.bt_OfficeDepartment.Text = "SAVE";
-            this.bt_OfficeDepartment.UseVisualStyleBackColor = false;
-            this.bt_OfficeDepartment.Click += new System.EventHandler(this.bt_OfficeDepartment_Click);
+            this.bt_SaveTech.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_SaveTech.ForeColor = System.Drawing.Color.Black;
+            this.bt_SaveTech.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveTech.Image")));
+            this.bt_SaveTech.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_SaveTech.Location = new System.Drawing.Point(1010, 362);
+            this.bt_SaveTech.Name = "bt_SaveTech";
+            this.bt_SaveTech.Size = new System.Drawing.Size(101, 29);
+            this.bt_SaveTech.TabIndex = 105;
+            this.bt_SaveTech.Text = "ADD";
+            this.bt_SaveTech.UseVisualStyleBackColor = true;
+            this.bt_SaveTech.Click += new System.EventHandler(this.bt_OfficeDepartment_Click);
             // 
             // OfficeDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1221, 403);
-            this.Controls.Add(this.bt_Remove);
-            this.Controls.Add(this.bt_OfficeDepartment);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_SaveTech);
             this.Controls.Add(this.dataGridView_OfficeDepartment);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -150,12 +147,12 @@ namespace SRIS.UserForms
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView_OfficeDepartment;
-        private System.Windows.Forms.Button bt_Remove;
-        private System.Windows.Forms.Button bt_OfficeDepartment;
         private System.Windows.Forms.BindingSource officeDeparmentBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn odidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn officeDepartmentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn abbreviationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_SaveTech;
     }
 }

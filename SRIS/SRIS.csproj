@@ -16,7 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Mew\Desktop\Sris\</PublishUrl>
+    <PublishUrl>E:\dad\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -152,6 +152,11 @@
     <Compile Include="Models\UnitSpecification.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Report\rpt_Inspection_IctEquip.cs">
       <DependentUpon>rpt_Inspection_IctEquip.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -162,6 +167,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt_Inspection.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpt_MonthlyTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_MonthlyTest.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rpt_Monthly_Technicians_Summary.cs">
@@ -290,14 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Report\rpt_Inspection_IctEquip.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_Inspection_IctEquip.cs</LastGenOutput>
@@ -305,6 +311,10 @@
     <EmbeddedResource Include="Report\rpt_Inspection.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_Inspection.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpt_MonthlyTest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_MonthlyTest.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rpt_Monthly_Technicians_Summary.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -402,6 +412,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_service_4.ico" />
+    <None Include="Resources\icons8_add_user_male_23px.png" />
+    <None Include="Resources\icons8_denied_23px.png" />
+    <None Include="Resources\icons8_data_32px.png" />
+    <None Include="Resources\icons8_system_task_32px.png" />
+    <None Include="Resources\icons8_database_32px.png" />
+    <None Include="Resources\icons8_account_32px.png" />
+    <None Include="Resources\icons8_request_service_32px.png" />
+    <None Include="Resources\icons8_pie_chart_32px.png" />
+    <None Include="Resources\icons8_archive_folder_32px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

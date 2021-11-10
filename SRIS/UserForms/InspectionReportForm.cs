@@ -125,19 +125,19 @@ namespace SRIS.UserForms
             DesignClass.dataGridViewDesign(dataGridView_UnitSpecs);
 
 
-            DesignClass.buttonDesign(bt_RemovePF);
-            DesignClass.buttonDesign(bt_RemovePI);
-            DesignClass.buttonDesign(bt_RemovePT);
-            DesignClass.buttonDesign(bt_RemoveR);
-            DesignClass.buttonDesign(bt_RemovePF);
-            DesignClass.buttonDesign(bt_RemoveUS);
-            DesignClass.buttonDesign(bt_SaveParticularFinding);
-            DesignClass.buttonDesign(bt_SaveProcedure);
-            DesignClass.buttonDesign(bt_SaveRecommendation);
-            DesignClass.buttonDesign(bt_SavePI);
-            DesignClass.buttonDesign(bt_UnitSpecification);
-            DesignClass.buttonDesign(bt_SaveInspectionReport);
-            DesignClass.buttonDesign(bt_Print);
+            //DesignClass.buttonDesign(bt_RemovePF);
+            //DesignClass.buttonDesign(bt_RemovePI);
+            //DesignClass.buttonDesign(bt_RemovePT);
+            //DesignClass.buttonDesign(bt_RemoveR);
+            //DesignClass.buttonDesign(bt_RemovePF);
+            //DesignClass.buttonDesign(bt_RemoveUS);
+            //DesignClass.buttonDesign(bt_SaveParticularFinding);
+            //DesignClass.buttonDesign(bt_SaveProcedure);
+            //DesignClass.buttonDesign(bt_SaveRecommendation);
+            //DesignClass.buttonDesign(bt_SavePI);
+            //DesignClass.buttonDesign(bt_UnitSpecification);
+            //DesignClass.buttonDesign(bt_SaveInspectionReport);
+            //DesignClass.buttonDesign(bt_Print);
         }
 
         private void bt_UnitSpecification_Click(object sender, EventArgs e)
@@ -237,6 +237,7 @@ namespace SRIS.UserForms
         {
             SaveInspectionReport();
             MessageBox.Show("Save succesfully");
+            Close();
         }
 
         private void SaveInspectionReport()

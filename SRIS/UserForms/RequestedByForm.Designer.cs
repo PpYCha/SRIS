@@ -50,7 +50,7 @@ namespace SRIS.UserForms
             this.dataGridView_Names.DataSource = this.serviceRequestBindingSource;
             this.dataGridView_Names.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Names.Name = "dataGridView_Names";
-            this.dataGridView_Names.Size = new System.Drawing.Size(936, 364);
+            this.dataGridView_Names.Size = new System.Drawing.Size(936, 368);
             this.dataGridView_Names.TabIndex = 0;
             // 
             // sridDataGridViewTextBoxColumn
@@ -72,11 +72,15 @@ namespace SRIS.UserForms
             // 
             // bt_Save
             // 
-            this.bt_Save.Location = new System.Drawing.Point(774, 381);
+            this.bt_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_Save.ForeColor = System.Drawing.Color.Black;
+            this.bt_Save.Image = ((System.Drawing.Image)(resources.GetObject("bt_Save.Image")));
+            this.bt_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_Save.Location = new System.Drawing.Point(847, 386);
             this.bt_Save.Name = "bt_Save";
-            this.bt_Save.Size = new System.Drawing.Size(174, 43);
-            this.bt_Save.TabIndex = 1;
-            this.bt_Save.Text = "Save";
+            this.bt_Save.Size = new System.Drawing.Size(101, 29);
+            this.bt_Save.TabIndex = 106;
+            this.bt_Save.Text = "SAVE";
             this.bt_Save.UseVisualStyleBackColor = true;
             this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
             // 
@@ -103,8 +107,8 @@ namespace SRIS.UserForms
 
         private System.Windows.Forms.DataGridView dataGridView_Names;
         private System.Windows.Forms.BindingSource serviceRequestBindingSource;
-        private System.Windows.Forms.Button bt_Save;
         private System.Windows.Forms.DataGridViewTextBoxColumn sridDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestedByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bt_Save;
     }
 }

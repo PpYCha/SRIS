@@ -47,10 +47,10 @@ namespace SRIS.UserForms
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.bt_RemovePT = new System.Windows.Forms.Button();
+            this.bt_SaveProcedure = new System.Windows.Forms.Button();
             this.dataGridView_ProcedureTest = new System.Windows.Forms.DataGridView();
             this.Column_Procedure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cb_ProcedureTest = new System.Windows.Forms.ComboBox();
-            this.bt_SaveProcedure = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -60,8 +60,6 @@ namespace SRIS.UserForms
             this.cb_TypeOfUnit = new System.Windows.Forms.ComboBox();
             this.cb_ComplaintOnUnit = new System.Windows.Forms.ComboBox();
             this.gb_TypeOfUnit = new System.Windows.Forms.GroupBox();
-            this.bt_RemoveUS = new System.Windows.Forms.Button();
-            this.bt_UnitSpecification = new System.Windows.Forms.Button();
             this.cb_ComponentDetail = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cb_Component = new System.Windows.Forms.ComboBox();
@@ -105,6 +103,8 @@ namespace SRIS.UserForms
             this.label21 = new System.Windows.Forms.Label();
             this.cb_ReceivedBy = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.bt_RemoveUS = new System.Windows.Forms.Button();
+            this.bt_UnitSpecification = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
             this.panel_PostPre.SuspendLayout();
@@ -136,6 +136,7 @@ namespace SRIS.UserForms
             // bt_scan
             // 
             this.bt_scan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_scan.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_scan.Location = new System.Drawing.Point(597, 8);
             this.bt_scan.Name = "bt_scan";
             this.bt_scan.Size = new System.Drawing.Size(90, 27);
@@ -147,6 +148,7 @@ namespace SRIS.UserForms
             // bt_Print
             // 
             this.bt_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_Print.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_Print.Location = new System.Drawing.Point(692, 6);
             this.bt_Print.Name = "bt_Print";
             this.bt_Print.Size = new System.Drawing.Size(90, 27);
@@ -159,6 +161,7 @@ namespace SRIS.UserForms
             // bt_SaveInspectionReport
             // 
             this.bt_SaveInspectionReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_SaveInspectionReport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_SaveInspectionReport.Location = new System.Drawing.Point(788, 7);
             this.bt_SaveInspectionReport.Name = "bt_SaveInspectionReport";
             this.bt_SaveInspectionReport.Size = new System.Drawing.Size(83, 27);
@@ -195,13 +198,14 @@ namespace SRIS.UserForms
             this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Location = new System.Drawing.Point(24, 1174);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(830, 175);
+            this.groupBox2.Size = new System.Drawing.Size(796, 175);
             this.groupBox2.TabIndex = 90;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Performed/Inspected by:";
             // 
             // bt_RemovePI
             // 
+            this.bt_RemovePI.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_RemovePI.Location = new System.Drawing.Point(749, 17);
             this.bt_RemovePI.Name = "bt_RemovePI";
             this.bt_RemovePI.Size = new System.Drawing.Size(83, 27);
@@ -227,7 +231,7 @@ namespace SRIS.UserForms
             this.dataGridView_Inspected.ReadOnly = true;
             this.dataGridView_Inspected.RowHeadersVisible = false;
             this.dataGridView_Inspected.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Inspected.Size = new System.Drawing.Size(802, 106);
+            this.dataGridView_Inspected.Size = new System.Drawing.Size(768, 106);
             this.dataGridView_Inspected.TabIndex = 94;
             // 
             // Column_Name
@@ -245,6 +249,7 @@ namespace SRIS.UserForms
             // 
             // bt_SavePI
             // 
+            this.bt_SavePI.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_SavePI.Location = new System.Drawing.Point(659, 18);
             this.bt_SavePI.Name = "bt_SavePI";
             this.bt_SavePI.Size = new System.Drawing.Size(83, 27);
@@ -301,26 +306,38 @@ namespace SRIS.UserForms
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.bt_RemovePT);
+            this.groupBox6.Controls.Add(this.bt_SaveProcedure);
             this.groupBox6.Controls.Add(this.dataGridView_ProcedureTest);
             this.groupBox6.Controls.Add(this.cb_ProcedureTest);
-            this.groupBox6.Controls.Add(this.bt_SaveProcedure);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Location = new System.Drawing.Point(24, 638);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(830, 175);
+            this.groupBox6.Size = new System.Drawing.Size(796, 175);
             this.groupBox6.TabIndex = 89;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Procedures/Tests";
             // 
             // bt_RemovePT
             // 
-            this.bt_RemovePT.Location = new System.Drawing.Point(749, 24);
+            this.bt_RemovePT.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_RemovePT.Location = new System.Drawing.Point(749, 27);
             this.bt_RemovePT.Name = "bt_RemovePT";
             this.bt_RemovePT.Size = new System.Drawing.Size(83, 27);
-            this.bt_RemovePT.TabIndex = 90;
+            this.bt_RemovePT.TabIndex = 96;
             this.bt_RemovePT.Text = "REMOVE";
             this.bt_RemovePT.UseVisualStyleBackColor = true;
             this.bt_RemovePT.Click += new System.EventHandler(this.bt_RemovePT_Click);
+            // 
+            // bt_SaveProcedure
+            // 
+            this.bt_SaveProcedure.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_SaveProcedure.Location = new System.Drawing.Point(659, 26);
+            this.bt_SaveProcedure.Name = "bt_SaveProcedure";
+            this.bt_SaveProcedure.Size = new System.Drawing.Size(83, 27);
+            this.bt_SaveProcedure.TabIndex = 95;
+            this.bt_SaveProcedure.Text = "ADD";
+            this.bt_SaveProcedure.UseVisualStyleBackColor = true;
+            this.bt_SaveProcedure.Click += new System.EventHandler(this.bt_SaveProcedure_Click);
             // 
             // dataGridView_ProcedureTest
             // 
@@ -338,7 +355,7 @@ namespace SRIS.UserForms
             this.dataGridView_ProcedureTest.ReadOnly = true;
             this.dataGridView_ProcedureTest.RowHeadersVisible = false;
             this.dataGridView_ProcedureTest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_ProcedureTest.Size = new System.Drawing.Size(805, 106);
+            this.dataGridView_ProcedureTest.Size = new System.Drawing.Size(771, 106);
             this.dataGridView_ProcedureTest.TabIndex = 85;
             // 
             // Column_Procedure
@@ -355,16 +372,6 @@ namespace SRIS.UserForms
             this.cb_ProcedureTest.Size = new System.Drawing.Size(505, 27);
             this.cb_ProcedureTest.TabIndex = 84;
             this.cb_ProcedureTest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_ProcedureTest_KeyPress);
-            // 
-            // bt_SaveProcedure
-            // 
-            this.bt_SaveProcedure.Location = new System.Drawing.Point(659, 24);
-            this.bt_SaveProcedure.Name = "bt_SaveProcedure";
-            this.bt_SaveProcedure.Size = new System.Drawing.Size(83, 27);
-            this.bt_SaveProcedure.TabIndex = 83;
-            this.bt_SaveProcedure.Text = "ADD";
-            this.bt_SaveProcedure.UseVisualStyleBackColor = true;
-            this.bt_SaveProcedure.Click += new System.EventHandler(this.bt_SaveProcedure_Click);
             // 
             // label15
             // 
@@ -390,7 +397,7 @@ namespace SRIS.UserForms
             this.groupBox4.Controls.Add(this.gb_TypeOfUnit);
             this.groupBox4.Location = new System.Drawing.Point(24, 333);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(830, 300);
+            this.groupBox4.Size = new System.Drawing.Size(796, 300);
             this.groupBox4.TabIndex = 82;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PRE-INSPECTION";
@@ -468,30 +475,10 @@ namespace SRIS.UserForms
             this.gb_TypeOfUnit.Controls.Add(this.dataGridView_UnitSpecs);
             this.gb_TypeOfUnit.Location = new System.Drawing.Point(6, 102);
             this.gb_TypeOfUnit.Name = "gb_TypeOfUnit";
-            this.gb_TypeOfUnit.Size = new System.Drawing.Size(818, 192);
+            this.gb_TypeOfUnit.Size = new System.Drawing.Size(784, 192);
             this.gb_TypeOfUnit.TabIndex = 27;
             this.gb_TypeOfUnit.TabStop = false;
             this.gb_TypeOfUnit.Text = "Unit Specification";
-            // 
-            // bt_RemoveUS
-            // 
-            this.bt_RemoveUS.Location = new System.Drawing.Point(743, 35);
-            this.bt_RemoveUS.Name = "bt_RemoveUS";
-            this.bt_RemoveUS.Size = new System.Drawing.Size(83, 27);
-            this.bt_RemoveUS.TabIndex = 89;
-            this.bt_RemoveUS.Text = "REMOVE";
-            this.bt_RemoveUS.UseVisualStyleBackColor = true;
-            this.bt_RemoveUS.Click += new System.EventHandler(this.bt_RemoveUS_Click);
-            // 
-            // bt_UnitSpecification
-            // 
-            this.bt_UnitSpecification.Location = new System.Drawing.Point(653, 34);
-            this.bt_UnitSpecification.Name = "bt_UnitSpecification";
-            this.bt_UnitSpecification.Size = new System.Drawing.Size(83, 27);
-            this.bt_UnitSpecification.TabIndex = 86;
-            this.bt_UnitSpecification.Text = "ADD";
-            this.bt_UnitSpecification.UseVisualStyleBackColor = true;
-            this.bt_UnitSpecification.Click += new System.EventHandler(this.bt_UnitSpecification_Click);
             // 
             // cb_ComponentDetail
             // 
@@ -557,7 +544,7 @@ namespace SRIS.UserForms
             this.dataGridView_UnitSpecs.ReadOnly = true;
             this.dataGridView_UnitSpecs.RowHeadersVisible = false;
             this.dataGridView_UnitSpecs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_UnitSpecs.Size = new System.Drawing.Size(793, 106);
+            this.dataGridView_UnitSpecs.Size = new System.Drawing.Size(759, 106);
             this.dataGridView_UnitSpecs.TabIndex = 86;
             // 
             // Column_Components
@@ -591,13 +578,14 @@ namespace SRIS.UserForms
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Location = new System.Drawing.Point(24, 819);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(830, 349);
+            this.groupBox5.Size = new System.Drawing.Size(796, 349);
             this.groupBox5.TabIndex = 83;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "POST-INSPECTION";
             // 
             // bt_RemoveR
             // 
+            this.bt_RemoveR.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_RemoveR.Location = new System.Drawing.Point(749, 195);
             this.bt_RemoveR.Name = "bt_RemoveR";
             this.bt_RemoveR.Size = new System.Drawing.Size(83, 27);
@@ -608,6 +596,7 @@ namespace SRIS.UserForms
             // 
             // bt_RemovePF
             // 
+            this.bt_RemovePF.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_RemovePF.Location = new System.Drawing.Point(749, 33);
             this.bt_RemovePF.Name = "bt_RemovePF";
             this.bt_RemovePF.Size = new System.Drawing.Size(83, 27);
@@ -643,7 +632,7 @@ namespace SRIS.UserForms
             this.dataGridView_Recommendation.ReadOnly = true;
             this.dataGridView_Recommendation.RowHeadersVisible = false;
             this.dataGridView_Recommendation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Recommendation.Size = new System.Drawing.Size(802, 106);
+            this.dataGridView_Recommendation.Size = new System.Drawing.Size(768, 106);
             this.dataGridView_Recommendation.TabIndex = 92;
             // 
             // Column_Recommendations
@@ -654,6 +643,7 @@ namespace SRIS.UserForms
             // 
             // bt_SaveRecommendation
             // 
+            this.bt_SaveRecommendation.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_SaveRecommendation.Location = new System.Drawing.Point(659, 195);
             this.bt_SaveRecommendation.Name = "bt_SaveRecommendation";
             this.bt_SaveRecommendation.Size = new System.Drawing.Size(83, 27);
@@ -698,7 +688,7 @@ namespace SRIS.UserForms
             this.dataGridView_FindingParticular.ReadOnly = true;
             this.dataGridView_FindingParticular.RowHeadersVisible = false;
             this.dataGridView_FindingParticular.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_FindingParticular.Size = new System.Drawing.Size(802, 106);
+            this.dataGridView_FindingParticular.Size = new System.Drawing.Size(768, 106);
             this.dataGridView_FindingParticular.TabIndex = 88;
             // 
             // Column_Particular
@@ -716,6 +706,7 @@ namespace SRIS.UserForms
             // 
             // bt_SaveParticularFinding
             // 
+            this.bt_SaveParticularFinding.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bt_SaveParticularFinding.Location = new System.Drawing.Point(659, 32);
             this.bt_SaveParticularFinding.Name = "bt_SaveParticularFinding";
             this.bt_SaveParticularFinding.Size = new System.Drawing.Size(83, 27);
@@ -788,7 +779,7 @@ namespace SRIS.UserForms
             this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Location = new System.Drawing.Point(24, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(830, 315);
+            this.groupBox3.Size = new System.Drawing.Size(796, 315);
             this.groupBox3.TabIndex = 81;
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
@@ -800,7 +791,7 @@ namespace SRIS.UserForms
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.Location = new System.Drawing.Point(16, 182);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(789, 5);
+            this.panel2.Size = new System.Drawing.Size(755, 5);
             this.panel2.TabIndex = 90;
             // 
             // cb_UnitReleasedTo_Position
@@ -811,7 +802,7 @@ namespace SRIS.UserForms
             this.cb_UnitReleasedTo_Position.FormattingEnabled = true;
             this.cb_UnitReleasedTo_Position.Location = new System.Drawing.Point(185, 244);
             this.cb_UnitReleasedTo_Position.Name = "cb_UnitReleasedTo_Position";
-            this.cb_UnitReleasedTo_Position.Size = new System.Drawing.Size(620, 27);
+            this.cb_UnitReleasedTo_Position.Size = new System.Drawing.Size(586, 27);
             this.cb_UnitReleasedTo_Position.TabIndex = 89;
             this.cb_UnitReleasedTo_Position.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_UnitReleasedTo_Position_KeyPress);
             // 
@@ -833,7 +824,7 @@ namespace SRIS.UserForms
             this.dateTimePicker_UnitReleasedTo.Enabled = false;
             this.dateTimePicker_UnitReleasedTo.Location = new System.Drawing.Point(185, 274);
             this.dateTimePicker_UnitReleasedTo.Name = "dateTimePicker_UnitReleasedTo";
-            this.dateTimePicker_UnitReleasedTo.Size = new System.Drawing.Size(620, 27);
+            this.dateTimePicker_UnitReleasedTo.Size = new System.Drawing.Size(586, 27);
             this.dateTimePicker_UnitReleasedTo.TabIndex = 87;
             // 
             // label2
@@ -866,7 +857,7 @@ namespace SRIS.UserForms
             this.cb_UnitReleasedTo.FormattingEnabled = true;
             this.cb_UnitReleasedTo.Location = new System.Drawing.Point(185, 215);
             this.cb_UnitReleasedTo.Name = "cb_UnitReleasedTo";
-            this.cb_UnitReleasedTo.Size = new System.Drawing.Size(620, 27);
+            this.cb_UnitReleasedTo.Size = new System.Drawing.Size(586, 27);
             this.cb_UnitReleasedTo.TabIndex = 86;
             this.cb_UnitReleasedTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_UnitReleasedTo_KeyPress);
             // 
@@ -879,7 +870,7 @@ namespace SRIS.UserForms
             this.cb_Position.FormattingEnabled = true;
             this.cb_Position.Location = new System.Drawing.Point(185, 114);
             this.cb_Position.Name = "cb_Position";
-            this.cb_Position.Size = new System.Drawing.Size(620, 27);
+            this.cb_Position.Size = new System.Drawing.Size(586, 27);
             this.cb_Position.TabIndex = 83;
             this.cb_Position.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_Position_KeyPress);
             // 
@@ -901,7 +892,7 @@ namespace SRIS.UserForms
             this.cb_RequestingOffice.FormattingEnabled = true;
             this.cb_RequestingOffice.Location = new System.Drawing.Point(185, 27);
             this.cb_RequestingOffice.Name = "cb_RequestingOffice";
-            this.cb_RequestingOffice.Size = new System.Drawing.Size(620, 27);
+            this.cb_RequestingOffice.Size = new System.Drawing.Size(586, 27);
             this.cb_RequestingOffice.TabIndex = 81;
             this.cb_RequestingOffice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_RequestingOffice_KeyPress);
             // 
@@ -923,7 +914,7 @@ namespace SRIS.UserForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker_Received.Location = new System.Drawing.Point(185, 143);
             this.dateTimePicker_Received.Name = "dateTimePicker_Received";
-            this.dateTimePicker_Received.Size = new System.Drawing.Size(620, 27);
+            this.dateTimePicker_Received.Size = new System.Drawing.Size(586, 27);
             this.dateTimePicker_Received.TabIndex = 80;
             // 
             // label9
@@ -944,7 +935,7 @@ namespace SRIS.UserForms
             this.cb_RequestedBy.FormattingEnabled = true;
             this.cb_RequestedBy.Location = new System.Drawing.Point(185, 56);
             this.cb_RequestedBy.Name = "cb_RequestedBy";
-            this.cb_RequestedBy.Size = new System.Drawing.Size(620, 27);
+            this.cb_RequestedBy.Size = new System.Drawing.Size(586, 27);
             this.cb_RequestedBy.TabIndex = 79;
             this.cb_RequestedBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_RequestedBy_KeyPress);
             // 
@@ -978,7 +969,7 @@ namespace SRIS.UserForms
             this.cb_ReceivedBy.FormattingEnabled = true;
             this.cb_ReceivedBy.Location = new System.Drawing.Point(185, 85);
             this.cb_ReceivedBy.Name = "cb_ReceivedBy";
-            this.cb_ReceivedBy.Size = new System.Drawing.Size(620, 27);
+            this.cb_ReceivedBy.Size = new System.Drawing.Size(586, 27);
             this.cb_ReceivedBy.TabIndex = 18;
             this.cb_ReceivedBy.SelectedIndexChanged += new System.EventHandler(this.cb_ReceivedBy_SelectedIndexChanged);
             this.cb_ReceivedBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_ReceivedBy_KeyPress);
@@ -995,6 +986,28 @@ namespace SRIS.UserForms
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // bt_RemoveUS
+            // 
+            this.bt_RemoveUS.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_RemoveUS.Location = new System.Drawing.Point(743, 38);
+            this.bt_RemoveUS.Name = "bt_RemoveUS";
+            this.bt_RemoveUS.Size = new System.Drawing.Size(83, 27);
+            this.bt_RemoveUS.TabIndex = 98;
+            this.bt_RemoveUS.Text = "REMOVE";
+            this.bt_RemoveUS.UseVisualStyleBackColor = true;
+            this.bt_RemoveUS.Click += new System.EventHandler(this.bt_RemoveUS_Click);
+            // 
+            // bt_UnitSpecification
+            // 
+            this.bt_UnitSpecification.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_UnitSpecification.Location = new System.Drawing.Point(653, 37);
+            this.bt_UnitSpecification.Name = "bt_UnitSpecification";
+            this.bt_UnitSpecification.Size = new System.Drawing.Size(83, 27);
+            this.bt_UnitSpecification.TabIndex = 97;
+            this.bt_UnitSpecification.Text = "ADD";
+            this.bt_UnitSpecification.UseVisualStyleBackColor = true;
+            this.bt_UnitSpecification.Click += new System.EventHandler(this.bt_UnitSpecification_Click);
+            // 
             // InspectionReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1004,7 +1017,7 @@ namespace SRIS.UserForms
             this.Controls.Add(this.panel_PostPre);
             this.Controls.Add(panel1);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1051,10 +1064,8 @@ namespace SRIS.UserForms
         private System.Windows.Forms.ComboBox cb_InspectedBy;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button bt_RemovePT;
         private System.Windows.Forms.DataGridView dataGridView_ProcedureTest;
         private System.Windows.Forms.ComboBox cb_ProcedureTest;
-        private System.Windows.Forms.Button bt_SaveProcedure;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label22;
@@ -1064,8 +1075,6 @@ namespace SRIS.UserForms
         private System.Windows.Forms.ComboBox cb_TypeOfUnit;
         private System.Windows.Forms.ComboBox cb_ComplaintOnUnit;
         private System.Windows.Forms.GroupBox gb_TypeOfUnit;
-        private System.Windows.Forms.Button bt_RemoveUS;
-        private System.Windows.Forms.Button bt_UnitSpecification;
         private System.Windows.Forms.ComboBox cb_ComponentDetail;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cb_Component;
@@ -1113,5 +1122,9 @@ namespace SRIS.UserForms
         private System.Windows.Forms.Button bt_Print;
         private System.Windows.Forms.Button bt_scan;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button bt_RemovePT;
+        private System.Windows.Forms.Button bt_SaveProcedure;
+        private System.Windows.Forms.Button bt_RemoveUS;
+        private System.Windows.Forms.Button bt_UnitSpecification;
     }
 }

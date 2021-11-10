@@ -44,10 +44,9 @@ namespace SRIS.UserControls
             this.tb_LastName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cb_AccessLevel = new System.Windows.Forms.ComboBox();
-            this.bt_AddUser = new System.Windows.Forms.Button();
             this.dataGridView_AccountList = new System.Windows.Forms.DataGridView();
             this.bt_Remove = new System.Windows.Forms.Button();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bt_AddUser = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +56,7 @@ namespace SRIS.UserControls
             this.accessLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AccountList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -182,21 +182,6 @@ namespace SRIS.UserControls
             this.cb_AccessLevel.Size = new System.Drawing.Size(282, 27);
             this.cb_AccessLevel.TabIndex = 13;
             // 
-            // bt_AddUser
-            // 
-            this.bt_AddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_AddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_AddUser.FlatAppearance.BorderSize = 0;
-            this.bt_AddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_AddUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_AddUser.Location = new System.Drawing.Point(660, 367);
-            this.bt_AddUser.Name = "bt_AddUser";
-            this.bt_AddUser.Size = new System.Drawing.Size(174, 43);
-            this.bt_AddUser.TabIndex = 14;
-            this.bt_AddUser.Text = "SAVE";
-            this.bt_AddUser.UseVisualStyleBackColor = false;
-            this.bt_AddUser.Click += new System.EventHandler(this.bt_AddUser_Click);
-            // 
             // dataGridView_AccountList
             // 
             this.dataGridView_AccountList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -229,21 +214,31 @@ namespace SRIS.UserControls
             // bt_Remove
             // 
             this.bt_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_Remove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.bt_Remove.FlatAppearance.BorderSize = 0;
-            this.bt_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Remove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bt_Remove.Location = new System.Drawing.Point(840, 367);
+            this.bt_Remove.ForeColor = System.Drawing.Color.Black;
+            this.bt_Remove.Image = global::SRIS.Properties.Resources.icons8_denied_23px;
+            this.bt_Remove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_Remove.Location = new System.Drawing.Point(913, 367);
             this.bt_Remove.Name = "bt_Remove";
-            this.bt_Remove.Size = new System.Drawing.Size(174, 43);
-            this.bt_Remove.TabIndex = 16;
+            this.bt_Remove.Size = new System.Drawing.Size(101, 29);
+            this.bt_Remove.TabIndex = 102;
             this.bt_Remove.Text = "REMOVE";
-            this.bt_Remove.UseVisualStyleBackColor = false;
+            this.bt_Remove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_Remove.UseVisualStyleBackColor = true;
             this.bt_Remove.Click += new System.EventHandler(this.bt_Remove_Click);
             // 
-            // accountBindingSource
+            // bt_AddUser
             // 
-            this.accountBindingSource.DataSource = typeof(SRIS.Models.Account);
+            this.bt_AddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_AddUser.ForeColor = System.Drawing.Color.Black;
+            this.bt_AddUser.Image = global::SRIS.Properties.Resources.icons8_add_user_male_23px;
+            this.bt_AddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_AddUser.Location = new System.Drawing.Point(811, 367);
+            this.bt_AddUser.Name = "bt_AddUser";
+            this.bt_AddUser.Size = new System.Drawing.Size(101, 29);
+            this.bt_AddUser.TabIndex = 101;
+            this.bt_AddUser.Text = "ADD";
+            this.bt_AddUser.UseVisualStyleBackColor = true;
+            this.bt_AddUser.Click += new System.EventHandler(this.bt_AddUser_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -303,14 +298,18 @@ namespace SRIS.UserControls
             this.positionDataGridViewTextBoxColumn.HeaderText = "Position";
             this.positionDataGridViewTextBoxColumn.Name = "positionDataGridViewTextBoxColumn";
             // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(SRIS.Models.Account);
+            // 
             // ucAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.bt_Remove);
-            this.Controls.Add(this.dataGridView_AccountList);
             this.Controls.Add(this.bt_AddUser);
+            this.Controls.Add(this.dataGridView_AccountList);
             this.Controls.Add(this.cb_AccessLevel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tb_LastName);
@@ -328,7 +327,7 @@ namespace SRIS.UserControls
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucAccount";
-            this.Size = new System.Drawing.Size(1031, 433);
+            this.Size = new System.Drawing.Size(1031, 401);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AccountList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -352,9 +351,7 @@ namespace SRIS.UserControls
         private System.Windows.Forms.TextBox tb_LastName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cb_AccessLevel;
-        private System.Windows.Forms.Button bt_AddUser;
         private System.Windows.Forms.DataGridView dataGridView_AccountList;
-        private System.Windows.Forms.Button bt_Remove;
 
         private System.Windows.Forms.BindingSource accountBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -366,5 +363,7 @@ namespace SRIS.UserControls
         private System.Windows.Forms.DataGridViewTextBoxColumn accessLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bt_AddUser;
+        private System.Windows.Forms.Button bt_Remove;
     }
 }

@@ -23,8 +23,16 @@ namespace SRIS.UserControls
             InitializeComponent();
 
 
+            try
+            {
+                LoadAll();
+            }
+            catch (Exception)
+            {
 
-            LoadAll();
+
+            }
+
             //   DesignClass.dataGridViewDesign(dataGridView1);
 
         }

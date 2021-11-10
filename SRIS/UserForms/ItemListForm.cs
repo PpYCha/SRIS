@@ -49,7 +49,7 @@ namespace SRIS.UserForms
 
 
             }
-            //DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
 
         }
 
