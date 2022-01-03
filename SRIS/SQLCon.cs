@@ -16,7 +16,7 @@ namespace ServiceRequestInformationSystem
         public static string sql;
 
         //static string dataSource = "tcp:PPYCHA,49172";
-        static string dataSource = "Mew";
+        static string dataSource = "DESKTOP-PU8CUAS";
         //  static string databaseName = "TestSrisDb";
         //static string dataSource = "tcp:192.168.254.102,49172";
 

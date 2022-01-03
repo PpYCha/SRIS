@@ -243,6 +243,7 @@ namespace SRIS.UserControls
                     }
 
 
+                    LoadSrUncomplete();
                     MessageBox.Show("Save successfully");
                     ClearTextField();
 
@@ -252,6 +253,15 @@ namespace SRIS.UserControls
             else
             {
                 MessageBox.Show("Please fill up the form completely..");
+            }
+        }
+
+        private void LoadSrUncomplete()
+        {
+            using (var ctx = new SrisContext())
+            {
+                dataGridView_SRInComplete.DataSource = ctx.ServiceRequests.Where(x => x.Status == "UnCompleted").ToList();
+
             }
         }
 
@@ -327,6 +337,11 @@ namespace SRIS.UserControls
 
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadSrUncomplete();
         }
     }
 }

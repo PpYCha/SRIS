@@ -30,17 +30,11 @@ namespace SRIS.UserControls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucServiceRequest));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bt_AddSeviceToBeProvidedBy = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Tosp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RequestedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Office = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateRequested = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeLeft = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AssignedTechnician = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_SRInComplete = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,7 +58,8 @@ namespace SRIS.UserControls
             this.cb_RequestedBy = new System.Windows.Forms.ComboBox();
             this.cb_OfficeDepartment = new System.Windows.Forms.ComboBox();
             this.cb_FaultDiagnosis = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SRInComplete)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,74 +99,31 @@ namespace SRIS.UserControls
             this.bt_AddSeviceToBeProvidedBy.UseVisualStyleBackColor = false;
             this.bt_AddSeviceToBeProvidedBy.Click += new System.EventHandler(this.bt_AddSeviceToBeProvidedBy_Click);
             // 
-            // dataGridView1
+            // dataGridView_SRInComplete
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView_SRInComplete.AllowUserToAddRows = false;
+            this.dataGridView_SRInComplete.AllowUserToDeleteRows = false;
+            this.dataGridView_SRInComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Tosp,
-            this.RequestedBy,
-            this.Office,
-            this.DateRequested,
-            this.TimeLeft,
-            this.AssignedTechnician});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 233);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1081, 242);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // Tosp
-            // 
-            this.Tosp.HeaderText = "Type Of Service Provided";
-            this.Tosp.Name = "Tosp";
-            this.Tosp.ReadOnly = true;
-            // 
-            // RequestedBy
-            // 
-            this.RequestedBy.HeaderText = "Requested By";
-            this.RequestedBy.Name = "RequestedBy";
-            this.RequestedBy.ReadOnly = true;
-            // 
-            // Office
-            // 
-            this.Office.HeaderText = "Office";
-            this.Office.Name = "Office";
-            this.Office.ReadOnly = true;
-            // 
-            // DateRequested
-            // 
-            this.DateRequested.HeaderText = "Date Requested";
-            this.DateRequested.Name = "DateRequested";
-            this.DateRequested.ReadOnly = true;
-            // 
-            // TimeLeft
-            // 
-            this.TimeLeft.HeaderText = "Time Left";
-            this.TimeLeft.Name = "TimeLeft";
-            this.TimeLeft.ReadOnly = true;
-            // 
-            // AssignedTechnician
-            // 
-            this.AssignedTechnician.HeaderText = "Remarks";
-            this.AssignedTechnician.Name = "AssignedTechnician";
-            this.AssignedTechnician.ReadOnly = true;
+            this.dataGridView_SRInComplete.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_SRInComplete.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dataGridView_SRInComplete.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_SRInComplete.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_SRInComplete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_SRInComplete.Location = new System.Drawing.Point(2, 233);
+            this.dataGridView_SRInComplete.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_SRInComplete.Name = "dataGridView_SRInComplete";
+            this.dataGridView_SRInComplete.ReadOnly = true;
+            this.dataGridView_SRInComplete.Size = new System.Drawing.Size(1081, 242);
+            this.dataGridView_SRInComplete.TabIndex = 6;
             // 
             // label3
             // 
@@ -470,11 +422,22 @@ namespace SRIS.UserControls
             this.cb_FaultDiagnosis.TabIndex = 23;
             this.cb_FaultDiagnosis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_FaultDiagnosis_KeyPress);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(806, 189);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ucServiceRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cb_FaultDiagnosis);
             this.Controls.Add(this.cb_OfficeDepartment);
             this.Controls.Add(this.cb_RequestedBy);
@@ -490,7 +453,7 @@ namespace SRIS.UserControls
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_SRInComplete);
             this.Controls.Add(this.bt_AddSeviceToBeProvidedBy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -498,7 +461,7 @@ namespace SRIS.UserControls
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "ucServiceRequest";
             this.Size = new System.Drawing.Size(1085, 477);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SRInComplete)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -510,7 +473,7 @@ namespace SRIS.UserControls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bt_AddSeviceToBeProvidedBy;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_SRInComplete;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -529,16 +492,11 @@ namespace SRIS.UserControls
         private System.Windows.Forms.CheckBox checkBox_ProceedToIR;
         private System.Windows.Forms.Button bt_Save;
         private System.Windows.Forms.Button bt_Clear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tosp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RequestedBy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Office;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateRequested;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TimeLeft;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AssignedTechnician;
         private System.Windows.Forms.ComboBox cb_TypeOfServiceDescription;
         private System.Windows.Forms.ComboBox cb_Tosp;
         private System.Windows.Forms.ComboBox cb_RequestedBy;
         private System.Windows.Forms.ComboBox cb_OfficeDepartment;
         private System.Windows.Forms.ComboBox cb_FaultDiagnosis;
+        private System.Windows.Forms.Button button1;
     }
 }
