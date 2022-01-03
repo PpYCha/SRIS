@@ -236,6 +236,12 @@
     <Compile Include="UserForms\ItemReplacementForm.Designer.cs">
       <DependentUpon>ItemReplacementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\OfficeDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\ItemReplacementForm.resx">
       <DependentUpon>ItemReplacementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\OfficeDepartment.resx">
       <DependentUpon>OfficeDepartment.cs</DependentUpon>

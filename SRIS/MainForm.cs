@@ -27,6 +27,7 @@ namespace SRIS
         private string serverName = "Mew";
         private string dataBasefileNameBackUp = "SrisDbTest" + ".bak";
         private string dataBaseFileName = "SrisDbTest";
+        public static Boolean isLogin;
 
         private void serviceRequestToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -120,7 +121,19 @@ namespace SRIS
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //LoginForm loginForm = new LoginForm();
+            //loginForm.ShowDialog();
+
+
+
+            //if (isLogin == true)
+            //{
             ShowServiceRequestPanel();
+            //}
+            //else
+            //{
+            //    this.Close();
+            //}
         }
 
         private void techninicianDataToolStripMenuItem_Click(object sender, EventArgs e)
