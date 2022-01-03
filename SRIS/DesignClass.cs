@@ -12,7 +12,7 @@ namespace SRIS
     {
         public static void dataGridViewDesign(DataGridView dgv)
         {
-
+            //Testing push
 
 
             //dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(25, 25, 25);
