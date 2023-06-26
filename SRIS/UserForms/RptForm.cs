@@ -19,6 +19,12 @@ namespace SRIS.UserForms
         public string reportCondition;
         public int ii_Id;
 
+        private string strServer = "tcp:SERVER,49172";
+        private string strDatabase = "SrisDbTest";
+        private string strUserId = "miso";
+        private string strPwd = "miso4321";
+        private bool useIntegratedSecurity = false;
+
         public RptForm()
         {
             InitializeComponent();
@@ -60,20 +66,15 @@ namespace SRIS.UserForms
 
 
         }
-
+      
         private void LoadInspectionReport()
         {
             crystalReportViewer1.Dock = DockStyle.Fill;
             Cursor.Current = Cursors.WaitCursor;
 
-            string strServer = "Mew";
-            string strDatabase = "SrisDbTest";
-            string strUserId = "miso_server";
-            string strPwd = "miso4321";
-            bool useIntegratedSecurity = true;
-
             rpt_Inspection report1 = new rpt_Inspection();
-            report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, useIntegratedSecurity);
+            report1.Database.Tables[0].LogOnInfo.ConnectionInfo.IntegratedSecurity = false;
+            report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, strUserId, strPwd);
             report1.SetParameterValue("ii_Id", ii_Id);
             report1.SetParameterValue("us_Id", ii_Id);
             report1.SetParameterValue("ii_Id_Procedure", ii_Id);
@@ -112,13 +113,7 @@ namespace SRIS.UserForms
 
         private void FirstHalfReport()
         {
-            Cursor.Current = Cursors.WaitCursor;
-
-            string strServer = "Mew";
-            string strDatabase = "SrisDbTest";
-            string strUserId = "miso_server";
-            string strPwd = "miso4321";
-            bool useIntegratedSecurity = true;
+            Cursor.Current = Cursors.WaitCursor;         
 
             string monthStart = cb_MonthStart.GetItemText(cb_MonthStart.SelectedItem);
             var monthEnd = cb_MonthStart.GetItemText(cb_MonthEnd.SelectedItem);
@@ -130,7 +125,8 @@ namespace SRIS.UserForms
             string lastDay = DateTime.DaysInMonth(Convert.ToInt32(year), monthNo).ToString();
 
             rpt_MonthlyTest report1 = new rpt_MonthlyTest();
-            report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, useIntegratedSecurity);
+            report1.Database.Tables[0].LogOnInfo.ConnectionInfo.IntegratedSecurity = false;
+            report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, strUserId, strPwd);
             report1.SetParameterValue("start", DateTime.ParseExact(year + "-" + monthStart + "-01", "yyyy-MMMM-dd", CultureInfo.CurrentCulture).Date);
             report1.SetParameterValue("end", DateTime.ParseExact(year + "-" + monthEnd + "-" + lastDay, "yyyy-MMMM-dd", CultureInfo.CurrentCulture).Date);
             crystalReportViewer1.ShowPrintButton = true;
@@ -143,12 +139,6 @@ namespace SRIS.UserForms
         private void YearlyReport()
         {
             Cursor.Current = Cursors.WaitCursor;
-
-            string strServer = "Mew";
-            string strDatabase = "SrisDbTest";
-            string strUserId = "miso_server";
-            string strPwd = "miso4321";
-            bool useIntegratedSecurity = true;
 
             var month = cb_MonthStart.GetItemText(cb_MonthStart.SelectedItem);
             var year = cb_Year.GetItemText(cb_Year.SelectedItem);
@@ -167,7 +157,8 @@ namespace SRIS.UserForms
             string orCOunt = GetOthersT(othersRepair, year);
 
             rpt_Yearly_Technicians report1 = new rpt_Yearly_Technicians();
-            report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, useIntegratedSecurity);
+            report1.Database.Tables[0].LogOnInfo.ConnectionInfo.IntegratedSecurity = false;
+            report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, strUserId, strPwd);
             report1.SetParameterValue("ReportLabel", "Service Request Annual Report");
             report1.SetParameterValue("YearLabel", "For the year of " + year);
             report1.SetParameterValue("DesktopRepair", drCount);
@@ -263,12 +254,6 @@ namespace SRIS.UserForms
         {
             Cursor.Current = Cursors.WaitCursor;
 
-            string strServer = "Mew";
-            string strDatabase = "SrisDbTest";
-            string strUserId = "miso_server";
-            string strPwd = "miso4321";
-            bool useIntegratedSecurity = true;
-
             var month = cb_MonthStart.GetItemText(cb_MonthStart.SelectedItem);
             var year = cb_Year.Text;
             string desktopRepairCount = "DESKTOP";
@@ -282,8 +267,6 @@ namespace SRIS.UserForms
                                                     "Year({ServiceRequests.DateCompleted})= " + year +
                                                     " AND {ServiceRequests.Status} Like '*Completed*'";
 
-
-
             try
             {
                 string drCount = GetCount(desktopRepairCount, month, year);
@@ -296,7 +279,8 @@ namespace SRIS.UserForms
 
 
                 rpt_Monthly_Technicians_Summary report1 = new rpt_Monthly_Technicians_Summary();
-                report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, useIntegratedSecurity);
+                report1.Database.Tables[0].LogOnInfo.ConnectionInfo.IntegratedSecurity = false;
+                report1.DataSourceConnections[0].SetConnection(strServer, strDatabase, strUserId, strPwd);
                 report1.SetParameterValue("MonthLabel", "For the month of " + month + ", " + year);
                 report1.SetParameterValue("DesktopRepair", drCount);
                 report1.SetParameterValue("LaptopRepair", lrCount);
@@ -361,8 +345,6 @@ namespace SRIS.UserForms
 
                 return number;
             }
-
-
         }
     }
 }
